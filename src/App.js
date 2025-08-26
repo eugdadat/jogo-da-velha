@@ -1,25 +1,29 @@
-import './App.css';  // Caminho correto se o arquivo .css estiver na mesma pasta que o App.js
+import './App.css'; 
 
- function Square() {
+function Square({ valor }) {
+  return (
+    <button className="square">{valor}</button> 
+  );
+}
+
+export default function Tabuleiro() {
   return (
     <div>
       <div>
-        <button className="square">1</button>
-        <button className="square">2</button>
-        <button className="square">3</button>
+        <Square valor="1" />
+        <Square valor="2" />
+        <Square valor="3" />
       </div>
       <div>
-        <button className="square">4</button>
-        <button className="square">5</button>
-        <button className="square">6</button>
+        <Square valor="4" />
+        <Square valor="5" />
+        <Square valor="6" />
       </div>
       <div>
-        <button className="square">7</button>
-        <button className="square">8</button>
-        <button className="square">9</button>
+        <Square valor="7" />
+        <Square valor="8" />
+        <Square valor="9" />
       </div>
     </div>
   );
 }
-
-export default Square;
